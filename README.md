@@ -20,10 +20,10 @@ Users should be able to:
 - **Bonus**: Use the local JSON data to dynamically populate the content
 
 ### Screenshot
-![](./screenshot-mobile.jpg)
-![](./screenshot.jpg)
+![](./Screenshot-mobile.jpg)
+![](./Screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [solution URL here](https://github.com/kaaato/results-summary-component-FM)
+- [live site URL here](https://kaaato.github.io/results-summary-component-FM)
