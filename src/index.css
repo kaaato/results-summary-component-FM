@@ -1,0 +1,366 @@
+@font-face {
+  font-family: "Hanken";
+  src:
+    url("./assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken";
+  src:
+    url("./assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken";
+  src:
+    url("./assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark: hsl(224, 30%, 27%);
+  --color-bg-gradients-top-result: hsl(252, 100%, 67%);
+  --color-bg-gradients-bottom-result: hsl(241, 81%, 54%);
+  --color-bg-gradients-top-circle: hsla(256, 72%, 46%, 1);
+  --color-bg-gradients-bottlm-circle: hsla(241, 72%, 46%, 0);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-red: hsl(0, 100%, 67%);
+  --color-bg-reaction: hsla(0, 100%, 67%, 0.1);
+  --color-yellow: hsl(39, 100%, 56%);
+  --color-bg-memory: hsl(39, 100%, 56%, 0.1);
+  --color-teal: hsl(166, 100%, 37%);
+  --color-bg-verbal: hsla(166, 100%, 37%, 0.1);
+  --color-blue: hsl(234, 85%, 45%);
+  --color-bg-visual: hsla(234, 85%, 45%, 0.1);
+  --shadow-blue: 0 25px 50px -12px rgb(17 37 212 / 0.25);
+
+  --spacing: 0.25rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  line-height: 1.5;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+picture,
+svg {
+  block-size: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: normal;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-family: "Hanken", sans-serif;
+  font-size: 1rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  place-content: start center;
+
+  @media (min-width: 48rem) {
+    place-content: center;
+  }
+}
+
+/* typography */
+.text-title-result {
+  color: var(--color-light-lavender);
+  font-size: 1.125rem;
+
+  @media (min-width: 48rem) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-total-score {
+  color: var(--color-white);
+  font-size: 3.25rem;
+  line-height: 1;
+
+  @media (min-width: 48rem) {
+    font-size: 4.375rem;
+  }
+}
+
+.text-total-score-shadow {
+  color: var(--color-white);
+  filter: opacity(0.5);
+
+  @media (min-width: 48rem) {
+    font-size: 1.125rem;
+  }
+}
+
+.text-status {
+  color: var(--color-white);
+  font-size: 1.5rem;
+
+  @media (min-width: 48rem) {
+    font-size: 2rem;
+  }
+}
+
+.text-description {
+  color: var(--color-light-lavender);
+
+  @media (min-width: 48rem) {
+    font-size: 1.125rem;
+  }
+}
+
+.text-title-summary {
+  width: max-content;
+  font-size: 1.125rem;
+  font-weight: 700;
+
+  @media (min-width: 48rem) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-reaction {
+  color: var(--color-red);
+}
+
+.text-memory {
+  color: var(--color-yellow)
+}
+
+.text-verbal {
+  color: var(--color-teal);
+}
+
+.text-visual {
+  color: var(--color-blue);
+}
+
+.text-title-sub-score {
+  @media (min-width: 48rem) {
+    font-size: 1.125rem;
+  }
+}
+
+.text-sub-score {
+  font-weight: 700;
+
+  @media (min-width: 48rem) {
+    font-size: 1.125rem;
+  }
+}
+
+.text-sub-score-shadow {
+  filter: opacity(0.5);
+}
+
+.text-btn-continue {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+/* layout */
+.grid {
+  display: grid;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-left {
+  margin-left: auto;
+}
+
+/* components */
+.card {
+  max-width: 46rem;
+  margin-inline: auto;
+  grid-template-rows: auto auto;
+  
+  @media (min-width: 48rem) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: var(--shadow-blue);
+    border-radius: calc(var(--spacing) * 8);
+  }
+}
+
+.container-result {
+  background: linear-gradient(var(--color-bg-gradients-top-result), var(--color-bg-gradients-bottom-result));
+  text-align: center;
+  padding-top: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 12);
+  padding-bottom: calc(var(--spacing) * 10);
+  gap: calc(var(--spacing) * 6);
+  border-radius: 0 0 calc(var(--spacing) * 8) calc(var(--spacing) * 8);
+  box-shadow: var(--shadow-blue);
+
+    @media (min-width: 48rem) {
+      padding-top: calc(var(--spacing) * 10);
+      padding-inline: calc(var(--spacing) * 13);
+      padding-bottom: calc(var(--spacing) * 14);
+      box-shadow: 0 0 #0000;
+      border-radius: calc(var(--spacing) * 8);
+    }
+}
+
+.container-total-score {
+  background: linear-gradient(var(--color-bg-gradients-top-circle), var(--color-bg-gradients-bottlm-circle));
+  width: 100%;
+  max-width: 8.5rem;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-inline: auto;
+
+    @media (min-width: 48rem) {
+      max-width: 12.5rem;      
+    }
+}
+
+.container-description {
+  @media (min-width: 48rem) {
+    gap: calc(var(--spacing) * 2);
+  }
+}
+
+.container-summary {
+  padding: calc(var(--spacing) * 7.5);
+  gap: calc(var(--spacing) * 6);
+
+  @media (min-width: 48rem) {
+    grid-template-rows: auto auto 1fr;
+    padding: calc(var(--spacing) * 10);
+  }
+}
+
+.score-card-list {
+  gap: calc(var(--spacing) * 4);
+}
+
+.score-card {
+  padding: calc(var(--spacing) * 4);
+  border-radius: 0.75rem;
+  gap: calc(var(--spacing) * 3);
+}
+
+.reaction {
+  background-color: var(--color-bg-reaction);
+}
+
+.memory {
+  background-color: var(--color-bg-memory);
+}
+
+.verbal {
+  background-color: var(--color-bg-verbal);
+}
+
+.visual {
+  background-color: var(--color-bg-visual);
+}
+
+.container-btn-continue {
+  align-items: center;
+}
+
+.btn-continue {
+  background: var(--color-dark);
+  width: 100%;
+  padding-block: calc(var(--spacing) * 4);
+  justify-content: center;
+  border-radius: 2rem;
+
+  &:hover {
+    background: linear-gradient(var(--color-bg-gradients-top-result), var(--color-bg-gradients-bottom-result));
+  }
+}
